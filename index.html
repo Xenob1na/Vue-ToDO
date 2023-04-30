@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <title>VUE TODO</title>
+</head>
+<body>
+    <div id="app">
+        <div class="ToDO">
+            <div class="LightMode">
+                <button class="LightMode-btn" v-on:click="VMode">
+                    {{ChangesText}}
+                </button>
+            </div>
+            <h1 class="ToDO__h1">{{title}}</h1>
+            <div class="ToDO__InputFields">
+                <input type="text" class="ToDO__InputFields-input"
+                :class="{'bg-light':!disabled , 'bg-dark-input':disabled}" 
+                :placeholder="placeholder"
+                :value="InputValue"
+                v-on:input="InputFields"
+                v-on:keypress.enter="AddToDo"
+                >
+                <button class="ToDO__InputFields-btn"
+                :class="{'bg-light-btn':disabled , 'bg-success-btn':!disabled}"
+                 v-on:click="AddToDo"
+                 >Добавить</button>
+            </div>
+            <ul class="ToDO__todo-list" v-if="todos.length !==0">
+                
+                 <li class="ToDO__todo-list-item" v-for="(todo, index) in todos"  :class="{'bg-light':!disabled , 'bg-success':disabled}">
+                        <div class="ToDO__todo-list-item-name">
+                            <h3>{{todo}}</h3>
+                        </div>
+                        <button class="remove"
+                        :class="{'bg-light-Btn':disabled , 'bg-dark-Btn':!disabled}"
+                         v-on:click="DelToDo(index)"
+                         >Удалить</button>
+                    </li>  
+                </ul>
+                <div v-if="todos.length ===0">
+                    <h4 class="VIF">Нет задач, создай их.</h4>  
+                </div>                
+            <button class="ToDO__Del-all" v-on:click="DelAllDoTo(index)">Удалить все</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

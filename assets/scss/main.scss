@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1A202B;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ToDO {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    padding: 20px;
+    width: 600px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__h1 {
+        background: linear-gradient(180deg, #E04C3E 0%, #DB913C 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        align-items: center;
+        margin-bottom: 50px;
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    &__InputFields-input {
+        width: 350px;
+        border: none;
+        padding: 15px 15px;
+        background-color:#29303c;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    &__InputFields-btn {
+        background-color: #A9DDF8;
+        color: #1A202B;
+        font-size: 14px;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+    }
+
+    &__InputFields-btn:hover {
+        background-color: #8ad4fb;
+    }
+
+    &__todo-list {
+        margin-top: 50px;
+    }
+
+    &__todo-list-item {
+        min-width: 600px;
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // &__todo-list-item .edit {
+    //     color : white;
+    //     padding: 15px 20px;
+    //     background-color: #29303c;
+    //     margin-right: 10px;
+    //     cursor:pointer;
+    //     text-decoration: none;
+    // }
+    
+    &__todo-list-item .remove {
+        background-color: #A9DDF8;
+        color: #1A202B;
+        font-size: 14px;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    &__todo-list-item .remove:hover {
+        background-color: #8ad4fb;
+    }
+
+    &__Del-all  {
+        background-color: #29303c;
+        color: red;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        margin-top: 30px;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    &__Del-all:hover  {
+       background-color: #1f2329;
+    }
+}
+
+.VIF {
+    margin-top: 20px;
+    color: white;
+}
+
+.LightMode-btn {
+        background-color: #29303c;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        margin-bottom: 150px;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        align-items: center;
+}
+
+.LightMode-btn:hover {
+    background-color: #1f2329;
+}
+
+.bg-light {
+    background-color: white;
+    color: #29303c;
+    transition: all 0.7s;
+}
+
+.bg-dark {
+    background: #1A202B;
+    transition: all 0.7s;
+}
+
+.bg-dark-input {
+    background-color:#29303c;
+}
+
+.bg-light-btn {
+    background-color: #A9DDF8;
+}
+
+.bg-success-btn {
+    background-color: #6cc8f9;
+}
